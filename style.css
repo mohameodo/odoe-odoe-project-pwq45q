@@ -1,0 +1,61 @@
+/* Custom Leaflet Popup Styles */
+.leaflet-popup-content-wrapper {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #d1d5db; /* text-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #374151; /* border-gray-700 */
+}
+
+.leaflet-popup-content {
+    margin: 1rem;
+    font-family: 'Inter', sans-serif; /* Assuming a modern font stack */
+}
+
+.leaflet-popup-tip-container {
+    display: none; /* Hiding the default tip for a cleaner look */
+}
+
+.leaflet-popup-close-button {
+    color: #9ca3af !important; /* text-gray-400 */
+    font-size: 1.25rem !important;
+    padding: 0.5rem !important;
+}
+
+.leaflet-popup-close-button:hover {
+    color: #ffffff !important; /* text-white */
+    background: none;
+}
+
+/* Custom Marker Icon (optional, but cool) */
+.custom-marker-icon {
+    background-color: #3b82f6; /* bg-blue-500 */
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Scrollbar styles for marker list */
+#marker-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#marker-list::-webkit-scrollbar-track {
+    background: #374151; /* bg-gray-700 */
+    border-radius: 10px;
+}
+
+#marker-list::-webkit-scrollbar-thumb {
+    background: #4b5563; /* bg-gray-600 */
+    border-radius: 10px;
+}
+
+#marker-list::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; /* bg-gray-500 */
+}
+
+/* Class for active marker mode cursor */
+.marker-cursor-enabled {
+    cursor: crosshair !important;
+}
+
