@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoe Maps | Interactive Routes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 overflow-hidden">
+
+    <div class="flex h-screen text-white">
+        <!-- Control Panel -->
+        <aside class="w-80 bg-gray-800/50 backdrop-blur-xl p-6 flex flex-col shadow-2xl z-20 border-r border-gray-700">
+            <header class="mb-8">
+                <h1 class="text-2xl font-bold text-white flex items-center">
+                    <i class="fas fa-map-marked-alt mr-3 text-blue-400"></i>
+                    Odoe Maps
+                </h1>
+                <p class="text-sm text-gray-400 mt-1">Create and visualize custom routes.</p>
+            </header>
+
+            <div class="flex-grow flex flex-col">
+                <!-- Controls -->
+                <div class="space-y-4">
+                    <button id="toggle-marker-mode" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        <span id="marker-mode-text">Start Placing Markers</span>
+                    </button>
+                    <button id="draw-route" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-gray-500 disabled:cursor-not-allowed" disabled>
+                        <i class="fas fa-route mr-2"></i>
+                        Draw Route
+                    </button>
+                    <button id="clear-all" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-gray-500 disabled:cursor-not-allowed" disabled>
+                        <i class="fas fa-trash mr-2"></i>
+                        Clear All
+                    </button>
+                </div>
+
+                <!-- Marker List -->
+                <div class="mt-8 flex-grow overflow-y-auto pr-2">
+                    <h2 class="text-lg font-semibold text-gray-300 mb-4">Markers</h2>
+                    <ul id="marker-list" class="space-y-3">
+                        <li id="no-markers-message" class="text-gray-500 text-center py-4">Click the map to add a marker.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="text-center text-xs text-gray-500 mt-4">
+                Powered by Leaflet.js & OpenStreetMap
+            </footer>
+        </aside>
+
+        <!-- Map Container -->
+        <main class="flex-grow h-screen relative">
+            <div id="map" class="h-full w-full z-10"></div>
+        </main>
+    </div>
+
+    <!-- Odoe Pill -->
+    <a href="https://odoe.studio" target="_blank" class="fixed bottom-4 right-4 bg-black/50 text-white text-xs font-semibold px-4 py-2 rounded-full backdrop-blur-sm hover:bg-black/75 transition-colors z-30">
+        Made by Odoe
+    </a>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
